@@ -12,6 +12,12 @@ import { IDiamondCut } from "../interfaces/IDiamondCut.sol";
 
 error InitializationFunctionReverted(address _initializationContractAddress, bytes _calldata);
 
+/*
+@my-detail
+using library because:
+    can't have any state vars
+    can use mix of internal and external funcs so keeping the size minimal
+*/
 library LibDiamond {
     bytes32 constant DIAMOND_STORAGE_POSITION = keccak256("diamond.standard.diamond.storage");
 
